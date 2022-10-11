@@ -6,6 +6,7 @@
     - name: New User
       ansible.builtin.user:
         name: "{{ username }}"
+        password: "{{ password }}"
         groups:
           - audio
         state: "present"
