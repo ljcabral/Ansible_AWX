@@ -1,8 +1,16 @@
-- name: Create a new user
+---
+- name: New User Linux
   hosts: 172.31.3.171
+  become: true
   tasks:
-    user:
-      name: "vrivero"
-      groups:
-        - sudo
-      state: present
+    - name: New User
+      ansible.builtin.user:
+        name: vrivero
+        groups:
+          - sudo
+        state: "present"
+        shell: "/bin/bash"
+        system: false
+        create_home: true
+        home: "/home/vrivero"
+        comment: "Ansible example"
