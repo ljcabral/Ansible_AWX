@@ -1,6 +1,5 @@
 ---
 - name: New User Linux
-  hosts: [LinuxDesarrollo]
   become: true
   tasks:
     - name: New User
