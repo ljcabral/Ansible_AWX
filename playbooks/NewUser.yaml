@@ -1,5 +1,6 @@
 ---
 - name: New User Linux
+  hosts: all
   become: true
   tasks:
     - name: New User
