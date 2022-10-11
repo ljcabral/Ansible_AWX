@@ -1,12 +1,6 @@
-# Playbook to add new user Linux
-- name: New User
-  hosts: 172.31.3.171
-  become: yes
+- name: Create a new user
   user:
-    name: vrivero
-    groups: sudo   # Empty by default.
+    name: "vrivero"
+    groups:
+      - wheel
     state: present
-    shell: /bin/bash       # Defaults to /bin/bash
-    system: no             # Defaults to no
-    createhome: yes        # Defaults to yes
-    home: /home/vrivero  # Defaults to /home/<username>
