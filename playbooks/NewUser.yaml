@@ -5,12 +5,12 @@
   tasks:
     - name: New User
       ansible.builtin.user:
-        name: vrivero
+        name: "{{ username }}
         groups:
           - audio
         state: "present"
         shell: "/bin/bash"
         system: false
         create_home: true
-        home: "/home/vrivero"
+        home: "/home/{{ username }}"
         comment: "Ansible example"
