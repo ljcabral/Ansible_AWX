@@ -1,6 +1,8 @@
 - name: Create a new user
-  user:
-    name: "vrivero"
-    groups:
-      - wheel
-    state: present
+  hosts: 172.31.3.171
+  tasks:
+    user:
+      name: "vrivero"
+      groups:
+        - sudo
+      state: present
