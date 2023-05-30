@@ -1,6 +1,6 @@
 ---
 - name: New User Linux
-  hosts: all
+  hosts: 172.31.3.117
   become: true
   tasks:
     - name: New User
