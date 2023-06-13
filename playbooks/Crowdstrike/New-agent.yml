@@ -1,5 +1,5 @@
 ---
-- hosts: "{{ host }}"
+- hosts: 172.31.3.117
   roles:
   - role: /opt/ansible/.ansible/collections/ansible_collections/crowdstrike/falcon/roles/crowdstrike.falcon.falcon_install
     vars:
