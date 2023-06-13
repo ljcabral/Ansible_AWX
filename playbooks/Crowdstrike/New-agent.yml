@@ -1,9 +1,9 @@
 ---
 - hosts: "{{ host }}"
   roles:
-  - role: crowdstrike.falcon.falcon_install
+  - role: /opt/ansible/roles/crowdstrike.falcon.falcon_install
     vars:
       falcon_sensor_version: '6.54.0-15110'
-  - role: crowdstrike.falcon.falcon_configure
+  - role: /opt/ansible/roles/crowdstrike.falcon.falcon_configure
     vars:
       falcon_cid: 320D1BF101394DE9A098F939B4389BED-67
